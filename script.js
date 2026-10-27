@@ -91,6 +91,7 @@
     details.append(status,title,description,tags,facts);
     for(const action of game.links||[]){const store=document.createElement('a');store.className='button button-primary';store.href=action.url;store.textContent=action.label[language]+' ↗';if(new URL(action.url,location.href).origin!==location.origin){store.target='_blank';store.rel='noopener noreferrer';}details.append(store);}
     if(game.trailer?.src){const video=document.createElement('video');video.controls=true;video.playsInline=true;video.preload='none';video.src=game.trailer.src;video.setAttribute('aria-label',copy[language].videoLabel);if(game.trailer.poster)video.poster=game.trailer.poster;details.append(video);}
+    if(id==='bombait'){const privacy=document.createElement('a');privacy.className='privacy-entry';privacy.href='/rodeforge/games/bombait/privacy/'+(language==='en'?'en/':'');privacy.textContent=copy[language].bombaitPrivacy;details.append(privacy);}
     details.append(link,note,returnButton);wrap.append(gallery,details);content.append(wrap);
     $('[data-dialog-brand]').textContent='RODEFORGE / '+game.title.toUpperCase();
   }
@@ -114,6 +115,7 @@
     $('.language-switch').setAttribute('aria-label',copy[lang].languageLabel);
     $$('[data-lang]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.lang===lang)));
     $$('.modal-close').forEach(button=>button.setAttribute('aria-label',copy[lang].close));
+    $$('[data-privacy-link]').forEach(node=>{node.href='/rodeforge/games/bombait/privacy/'+(lang==='en'?'en/':'');});
     renderProjects();
     $('.wordmark').setAttribute('aria-label',lang==='es'?'RodeForge Interactive, inicio':'RodeForge Interactive, home');
     $('.emblem').setAttribute('aria-label',lang==='es'?'Emblema de RodeForge en blanco':'RodeForge symbol in white');

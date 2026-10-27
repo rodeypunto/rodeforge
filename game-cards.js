@@ -17,6 +17,7 @@ window.RODEFORGE_CARDS = (games, language, labels) => {
         <span class="project-identity">${logo}${foreground}</span>
         <span class="project-copy"><span class="project-genre">${escape(text.genre)}</span><span class="project-title">${escape(game.title)}</span><span class="project-summary" id="project-${escape(id)}-summary">${escape(text.summary)}</span><span class="project-bottom"><span class="project-cta">${escape(labels.exploreGame)} <span aria-hidden="true">↗</span></span><span class="project-platform">${escape(text.platform)}</span></span></span>
       </button>
+      ${id==='bombait'?`<a class="privacy-entry" href="/rodeforge/games/bombait/privacy/${language==='en'?'en/':''}">${escape(labels.bombaitPrivacy)}</a>`:''}
     </article>`;
   }).join('\n');
 };
