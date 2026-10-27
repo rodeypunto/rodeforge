@@ -1,0 +1,113 @@
+/* RodeForge colour system. Game artwork remains in its original palette. */
+:root {
+  --background: #071522;
+  --surface-secondary: #0D202C;
+  --surface-raised: #142B36;
+  --text-primary: #F5F1E9;
+  --text-secondary: #A5B5BF;
+  --brand: #56E0D2;
+  --brand-hover: #34C6B7;
+  --border: #29404B;
+  --strip-background: #102631;
+  --shadow-color: #000000;
+  --game-coins-gold: #FFE2A1;
+  --game-coins-cream: #FFF4D8;
+  --ambient-rgb: 165, 181, 191;
+  /* Compatibility aliases keep existing components on this single palette. */
+  --ink: var(--background);
+  --paper: var(--text-primary);
+  --muted: var(--text-secondary);
+  --line: var(--border);
+  --amber: var(--brand);
+  --orange: var(--brand);
+  --mint: var(--brand);
+  --coral: var(--text-secondary);
+  --sky: var(--text-primary);
+}
+
+body { background: var(--background); color: var(--text-primary); }
+::selection { background: var(--brand); color: var(--background); }
+:focus-visible { outline-color: var(--brand); }
+.site-header { background: var(--background); border-color: var(--border); }
+.site-header.is-scrolled { background: color-mix(in srgb, var(--background) 96%, transparent); border-color: var(--border); }
+.wordmark, .wordmark>span, .brand-signature, .brand-signature small { color: var(--text-primary); }
+.language-switch button, .language-switch span { color: var(--text-secondary); }
+.language-switch button:hover, .desktop-nav a:hover, .mobile-nav a:hover { color: var(--brand); }
+.header-cta { border-color: var(--border); }
+.header-cta:hover { background: var(--surface-raised); color: var(--brand); border-color: var(--brand-hover); }
+.mobile-nav { background: var(--surface-secondary); }
+.mobile-nav>a { border-color: var(--border); }
+.mobile-nav>a:before { color: var(--text-secondary); }
+.hero-texture { background-image: linear-gradient(115deg, var(--background) 35%, var(--surface-secondary) 100%); opacity: 1; }
+.hero:after { background: none; }
+.hero h1>span { color: var(--text-primary); }
+.hero h1>.ember-text { color: var(--brand); }
+.hero-coordinate, .hero-description, .hero-baseline, .play-intro .mono { color: var(--text-secondary); }
+.status-light, .availability i { background: var(--brand); box-shadow: none; }
+.hero-brand:after { color: var(--text-secondary); opacity: .2; }
+.brand-orbit { opacity: .12; }
+.brand-orbit i, .brand-orbit i:nth-child(2), .brand-orbit i:nth-child(3) { border-color: var(--text-secondary); }
+.brand-orbit:before, .brand-orbit:after { background: var(--border); }
+.play-icon { border-color: var(--border); }
+.button-primary, .publisher-grid .button { background: var(--brand); border-color: var(--brand); color: var(--background); }
+.button-primary:hover, .publisher-grid .button:hover { background: var(--brand-hover); border-color: var(--brand-hover); color: var(--background); box-shadow: none; }
+.button>span:last-child { transition: transform .25s var(--ease-out); }
+.button:hover>span:last-child { transform: translate(2px,-2px); }
+.text-link { color: var(--text-primary); border-color: var(--border); }
+.text-link:hover { color: var(--brand); border-color: var(--brand-hover); }
+.scroll-link>span:last-child { color: var(--text-secondary); }
+.manifesto-strip { background: var(--strip-background); color: var(--text-secondary); border-block: 1px solid var(--border); }
+.manifesto-strip b { color: var(--text-secondary); opacity: .55; }
+.section-index { color: var(--text-secondary); }
+.games .section-heading:after { background: var(--border); }
+.bombait-card .game-art, .coins-card .game-art { border-color: var(--border); }
+.game-art { background: var(--surface-secondary); }
+.game-card:hover .game-art { border-color: color-mix(in srgb, var(--text-secondary) 50%, var(--border)); box-shadow: 0 12px 35px color-mix(in srgb, var(--shadow-color) 15%, transparent); }
+.bombait-card .game-caption h3, .coins-card .game-caption h3 { color: var(--text-primary); }
+.game-kicker, .game-summary, .games-footnote, .game-platform>span { color: var(--text-secondary); }
+.game-platform>span { border-color: var(--border); }
+.game-status, .game-status.dark { background: var(--surface-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+.game-status i, .game-status.dark i { background: var(--brand); }
+.gallery-hint { background: var(--surface-secondary); color: var(--text-primary); border-color: var(--border); }
+.round-arrow { background: var(--surface-secondary); border-color: var(--border); color: var(--text-primary); }
+.game-art:hover .round-arrow { background: var(--brand); color: var(--background); border-color: var(--brand); }
+.studio { background: var(--surface-secondary); }
+.studio-grid h2 span, .philosophy-heading h2 span, .publisher-grid h2 span, .contact h2 span { color: var(--text-primary); }
+.studio-deck, .studio-copy>p:not(.large-copy), .studio-top>.mono, .studio-portrait figcaption .eyebrow, .studio-portrait figcaption .mono { color: var(--text-secondary); }
+.studio-copy>[data-i18n=studioCareer] { color: var(--text-secondary)!important; border-color: var(--border); }
+.studio-portrait>img { border-color: var(--border); }
+.creator-quote { border-color: var(--brand); }
+.signature-cross { color: var(--text-secondary); }
+.gamelx-link { color: var(--text-primary); border-color: var(--border); }
+.gamelx-link:hover { color: var(--brand); border-color: var(--brand-hover); }
+.philosophy-row, .philosophy-row:last-child { border-color: var(--border); }
+.philosophy-number, .philosophy-row:nth-child(2) .philosophy-number, .philosophy-row:nth-child(3) .philosophy-number { color: var(--text-secondary); opacity: 1; }
+.publisher-panel { background: var(--surface-secondary); border-color: var(--border); }
+.publisher-glow { background: linear-gradient(130deg, transparent 40%, var(--surface-raised)); opacity: .45; }
+.publisher-top .section-index, .publisher-stamp { color: var(--text-secondary); border-color: var(--border); }
+.publisher-copy>p:not(.large-copy), .publisher-topics span { color: var(--text-secondary); border-color: var(--border); }
+.publisher-topics span:before { color: var(--text-secondary); }
+.publisher-copy .text-link { color: var(--text-primary); border-color: var(--border); }
+.publisher-copy .text-link:hover { color: var(--brand); border-color: var(--brand-hover); }
+.contact .section-index { color: var(--text-secondary); }
+.copy-email { color: var(--text-secondary); border-color: var(--border); }
+.copy-email:hover, .email-link:hover { color: var(--brand); }
+.site-footer { background: var(--surface-secondary); border-color: var(--border); }
+.footer-tagline, .footer-brand-motto { color: var(--text-primary); }
+.footer-description, .footer-navigation h2, .footer-connect h2, .footer-bottom>p { color: var(--text-secondary); }
+.footer-navigation>a, .footer-connect>a, .footer-connect>.credits-button { color: var(--text-primary); }
+.footer-bottom { border-color: var(--border); }
+.back-top>span:last-child { color: var(--text-secondary); }
+.back-top:hover, .back-top:hover>span:last-child { color: var(--brand); }
+.modal, .intro-modal { background: var(--surface-secondary); border-color: var(--border); }
+.modal::backdrop { background: color-mix(in srgb, var(--background) 88%, transparent); }
+.modal-close { background: var(--surface-raised); border-color: var(--border); color: var(--text-primary); }
+.modal-close:hover { color: var(--brand); border-color: var(--brand-hover); }
+.modal-game-copy .modal-description, .modal-art-note, .intro-caption, .credits-modal p:not(.eyebrow) { color: var(--text-secondary); }
+.modal-game-tags span { border-color: var(--border); color: var(--text-secondary); }
+.game-gallery { background: var(--background); border-color: var(--border); }
+.carousel-toolbar, .carousel-arrow, .carousel-thumbnail { border-color: var(--border); }
+.carousel-thumbnail { background: var(--surface-raised); }
+.carousel-caption>span:last-child { color: var(--text-secondary); }
+.carousel-thumbnail[aria-pressed=true] { box-shadow: none; border-color: var(--brand); }
+.toast { background: var(--surface-raised); color: var(--text-primary); border: 1px solid var(--brand-hover); }
